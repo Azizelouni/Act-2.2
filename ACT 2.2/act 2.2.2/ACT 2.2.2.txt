@@ -1,0 +1,15 @@
+/*INSERT INTO `clients` (`id`, `nom`, `telephone`, `abonnement`, `interet`) VALUES
+(1, 'Aziz', 58643733, 'vip', 'musique');
+INSERT INTO `fournisseurs` (`id`, `nom_fournisseur`) VALUES
+4, 'Darty');
+INSERT INTO `produits` (`id`, `no`, `type`, `marque`, `ref_fournisseur`) VALUES
+(11, 'machine a laver', 'Electromenager', 'LG', 4);*/
+SELECT * FROM clients;
+SELECT * FROM produits;
+SELECT DISTINCT type FROM produits;
+SELECT type ,COUNT(*) FROM produits GROUP BY type;
+SELECT * FROM clients WHERE `nom` LIKE '%s%';
+/*ALTER TABLE `produits` ADD `prix` FLOAT NOT NULL DEFAULT '200' AFTER `ref_fournisseur`;*/
+SELECT no,type, prix, nom_fournisseur FROM `produits` INNER JOIN fournisseurs ON produits.ref_fournisseur = fournisseurs.id;
+SELECT nom_fournisseur, COUNT(no)
+FROM produits JOIN fournisseurs ON produits.ref_fournisseur= fournisseurs.id GROUP BY nom_fournisseur;

@@ -1,0 +1,52 @@
+*/ création base de donnée */
+CREATE DATABASE db_aziz_act222
+
+/* création des tables table*/ 
+ 
+CREATE TABLE quotation
+(
+    id INT PRIMARY KEY NOT NULL,
+    description VARCHAR (100),
+    turnover  DOUBLE,
+    #id_user INT PRIMARY KEY NOT NULL,
+)
+
+CREATE TABLE user
+(
+    id INT PRIMARY KEY NOT NULL,
+    firstname VARCHAR(100),
+    lastname  VARCHAR(100),
+    #id_user INT PRIMARY KEY NOT NULL,
+)
+
+CREATE TABLE quotationContent
+(
+    
+ id INT PRIMARY KEY NOT NULL,
+    #id cotation INT PRIMARY KEY NOT NULL,
+    #id_offer    INT PRIMARY KEY NOT NULL, 
+    quantity  INT,
+    TOTALTTC  INT,
+
+)
+ 
+CREATE TABLE offre
+(
+    id NT PRIMARY KEY NOT NULL,,
+    offreName varchar(64)
+    unitPrice INT,
+)
+
+
+
+
+
+SELECT offername, unitPriceTTC, quantity, total TTC FROM offer , quotationcontent , quotation
+WHERE quotationcontent.id_quotation=quotation.id AND quotationcontent.id_offer=offer.ID AND quotation.id = 10;
+SELECT ID, firstname , lastname , email FROM quotation , user
+WHERE quotation.ID_user= user.ID AND (user.email LIKE '%gmail.com' OR user.email LIKE '%GMAIL.COM');
+
+
+
+
+

@@ -1,0 +1,38 @@
+*/ création base de donnée */
+CREATE DATABASE db_aziz_act222
+
+/* création des tables table*/ 
+ 
+CREATE TABLE quotation
+(
+    id INT PRIMARY KEY NOT NULL,
+    description VARCHAR (100),
+    turnover  DOUBLE,
+    #id_user INT PRIMARY KEY NOT NULL,
+)
+
+CREATE TABLE user
+(
+    id INT PRIMARY KEY NOT NULL,
+    firstname VARCHAR(100),
+    lastname  VARCHAR(100),
+    #id_user INT PRIMARY KEY NOT NULL,
+)
+
+CREATE TABLE quotationContent
+(
+    
+ id INT PRIMARY KEY NOT NULL,
+    #id cotation INT PRIMARY KEY NOT NULL,
+    #id_offer    INT PRIMARY KEY NOT NULL, 
+    quantity  INT,
+    TOTALTTC  INT,
+
+)
+ 
+CREATE TABLE offre
+(
+    id NT PRIMARY KEY NOT NULL,,
+    offreName varchar(64)
+    unitPrice INT,
+)
